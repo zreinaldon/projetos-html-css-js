@@ -56,22 +56,6 @@ header {
     margin-bottom: 4.5rem;
 }
 
-.header_text button {
-    font-size: 2rem;
-    font-family: var(--paragraph-font);
-    font-weight: 700;
-
-    padding: 1.2rem 5rem;
-
-    border-radius: 0.5rem;
-    border: none;
-
-    cursor: pointer;
-
-    background-color: var(--purple);
-    color: var(--white);
-}
-
 .header_img {
     max-width: 30rem;
 }
@@ -91,11 +75,11 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 6.8rem 11.1rem;
-
-
-    max-width: 1100px;
+    justify-items: center;
 
     margin: 0 auto;
+
+    max-width: 1100px;
 
     padding: 15rem 2rem;
 }
@@ -155,4 +139,96 @@ main {
 
 #card_color6 {
     background-color: #6663FF;
+}
+
+/* ============================================================================== */
+
+footer {
+    background-color: var(--light-purple);
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    padding: 8.5rem 2rem 0 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-family: var(--title-font);
+    font-size: 3.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 6rem 2rem 6rem 2rem;
+
+    border-radius: 0.6rem;
+    border: none;
+}
+
+textarea {
+    width: 47rem;
+    margin-top: 1.5rem;
+    height: 16.5rem;
+}
+
+
+.form-inputs-button {
+    height: 6.5rem;
+    width: 47rem;
+    margin-top: 1.5rem;
+}
+
+::placeholder {
+    font-family: var(--paragraph-font);
+    font-size: 1.5rem;
+}
+
+.button-mensage {
+    margin-top: 3rem;
+}
+
+.button-style {
+    font-size: 2rem;
+    font-family: var(--paragraph-font);
+    font-weight: 700;
+
+    padding: 1.2rem 5rem;
+
+    border-radius: 0.5rem;
+    border: none;
+
+    cursor: pointer;
+
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+/* ============================================================================== */
+
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header_container {
+        justify-content: center;
+        text-align: center;
+    }
+    .header_img img {
+        display: none;
+    }
 }
